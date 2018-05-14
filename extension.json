@@ -1,0 +1,49 @@
+{
+	"name": "UserAgreement",
+	"version": "1.0.0",
+	"author": [
+		"[https://www.mediawiki.org/wiki/User:Kevin.ji Kevin Ji]",
+		"[http://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese]"
+	],
+	"descriptionmsg": "useragreement-desc",
+	"manifest_version": 1,
+	"type": "parserhook",
+	"MessagesDirs": {
+		"UserAgreement": [
+			"i18n"
+		]
+	},
+	"APIModules": {
+		"uaAcceptAgreement": "ApiUAAcceptAgreement"
+	},
+	"AutoloadClasses": {
+		"UserAgreement": "includes/UserAgreement.php",
+		"UserAgreementHooks": "includes/UserAgreementHooks.php",
+		"ApiUAAcceptAgreement": "includes/ApiUAAcceptAgreement.php"
+	},
+	"ResourceModules": {
+		"ext.UserAgreement.render": {
+			"styles": [
+				"/resources/renderUserAgreement.css"
+			],
+			"scripts": [
+				"/resources/renderUserAgreement.js"
+			],
+			"messages": [
+				"useragreement-dialog-message"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "UserAgreement"
+	},
+	"Hooks": {
+		"LoadExtensionSchemaUpdates": [
+			"UserAgreementHooks::loadExtensionSchemaUpdates"
+		],
+		"BeforePageDisplay": [
+			"UserAgreementHooks::addUserAgreement"
+		]
+	}
+}
