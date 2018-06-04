@@ -1,10 +1,11 @@
 {
 	"name": "UserAgreement",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": [
 		"[https://www.mediawiki.org/wiki/User:Kevin.ji Kevin Ji]",
 		"[http://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese]"
 	],
+	"url": "https://www.mediawiki.org/wiki/Extension:UserAgreement",
 	"descriptionmsg": "useragreement-desc",
 	"manifest_version": 1,
 	"type": "parserhook",
