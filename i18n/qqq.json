@@ -4,7 +4,7 @@
 			"cicalese"
 		]
 	},
-	"useragreement-desc":  "{{desc|name=User Agreement|url=https://www.mediawiki.org/wiki/Extension:User_Agreeent}}",
+	"useragreement-desc": "{{desc|name=User Agreement|url=https://www.mediawiki.org/wiki/Extension:User_Agreeent}}",
 	"useragreement": "User agreement text to be displayed to the user (default is blank)",
 	"useragreement-dialog-message": "User acceptance checkbox description to the user",
 	"apihelp-uaAcceptAgreement-description": "{{doc-apihelp-description|uaAcceptAgreement}}",

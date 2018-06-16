@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"useragreement-desc": "로그인 후 사용자 동의를 제시합니다.",
+	"apihelp-uaAcceptAgreement-description": "사용자 동의 수락",
+	"apihelp-uaAcceptAgreement-summary": "사용자 동의 수락"
+}

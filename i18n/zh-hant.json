@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"useragreement-desc": "在登入後呈現使用者協議。",
+	"useragreement-dialog-message": "勾選方框來同意以上的條件內容",
+	"apihelp-uaAcceptAgreement-description": "接受使用者協議",
+	"apihelp-uaAcceptAgreement-summary": "接受使用者協議"
+}
