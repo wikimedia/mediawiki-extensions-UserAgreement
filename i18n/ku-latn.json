@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kur"
+		]
+	},
+	"useragreement-desc": "Oturum açtıktan sonra kullanıcı sözleşmesini oluşturur.\n\nPiştî vekirina danişînê peyamnameya bikarhênerî çêbike.",
+	"useragreement-dialog-message": "Qûtîka pejirê ji bo destûrdayîna şertên jor",
+	"apihelp-uaAcceptAgreement-description": "Peyamnameya bikarhênerî bipejire",
+	"apihelp-uaAcceptAgreement-summary": "Peyamnameya bikarhênerî bipejire"
+}

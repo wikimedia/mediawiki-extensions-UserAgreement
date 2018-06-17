@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"useragreement-desc": "Го дава корисничкиот договор по најавата.",
+	"useragreement-dialog-message": "Штиклирајте за да дадете согласност со горенаведените услови",
+	"apihelp-uaAcceptAgreement-description": "Прифати кориснички договор",
+	"apihelp-uaAcceptAgreement-summary": "Прифати кориснички договор"
+}

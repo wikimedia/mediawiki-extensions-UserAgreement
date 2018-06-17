@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"useragreement-desc": "在登录后渲染用户协议。",
+	"useragreement-dialog-message": "同意上述条件的复选框",
+	"apihelp-uaAcceptAgreement-description": "接受用户协议",
+	"apihelp-uaAcceptAgreement-summary": "接受用户协议"
+}
