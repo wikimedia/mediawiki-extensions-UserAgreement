@@ -4,5 +4,7 @@
 			"Red Winged Duck"
 		]
 	},
-	"useragreement-desc": "Стварае пагадненьне карыстальніка пасьля ўваходу."
+	"useragreement-desc": "Стварае пагадненьне карыстальніка пасьля ўваходу.",
+	"useragreement-dialog-message": "Адзначце поле, каб пагадзіцца з умовамі вышэй",
+	"apihelp-uaAcceptAgreement-description": "Прыняць карыстальніцкае пагадненьне"
 }

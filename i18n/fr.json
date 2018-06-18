@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko"
+		]
+	},
+	"useragreement-desc": "Affiche l’accord utilisateur après la connexion.",
+	"useragreement-dialog-message": "Case à cocher pour consentir aux conditions ci-dessus",
+	"apihelp-uaAcceptAgreement-description": "Accepter l’accord utilisateur",
+	"apihelp-uaAcceptAgreement-summary": "Accepter l’accord utilisateur"
+}
