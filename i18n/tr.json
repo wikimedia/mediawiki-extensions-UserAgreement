@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"useragreement-desc": "Oturum açtıktan sonra kullanıcı sözleşmesini oluşturur.",
+	"useragreement-dialog-message": "Yukarıdaki koşullara izin vermek için onay kutusu",
+	"apihelp-uaAcceptAgreement-description": "Kullanıcı sözleşmesini kabul et",
+	"apihelp-uaAcceptAgreement-summary": "Kullanıcı sözleşmesini kabul et"
+}
