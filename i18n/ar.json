@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"useragreement-desc": "يجسد اتفاقية المستخدم بعد تسجيل الدخول.",
+	"useragreement-dialog-message": "حدد خانة للموافقة على الشروط أعلاه",
+	"apihelp-uaAcceptAgreement-description": "اقبل اتفاقية المستخدم",
+	"apihelp-uaAcceptAgreement-summary": "اقبل اتفاقية المستخدم"
+}
