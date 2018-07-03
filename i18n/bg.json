@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"StanProg"
+		]
+	},
+	"useragreement-desc": "Извежда споразумение за ползване след вход.",
+	"useragreement-dialog-message": "Отметка за съгласие с условията по-горе",
+	"apihelp-uaAcceptAgreement-description": "Приемане на споразумението за ползване",
+	"apihelp-uaAcceptAgreement-summary": "Приемане на споразумението за ползване"
+}
