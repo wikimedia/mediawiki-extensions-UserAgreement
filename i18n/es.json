@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"useragreement-desc": "Muestra el acuerdo de usuario tras el acceso.",
+	"useragreement-dialog-message": "Activa la casilla para dar tu consentimiento a las condiciones anteriores",
+	"apihelp-uaAcceptAgreement-description": "Aceptar el acuerdo de usuario",
+	"apihelp-uaAcceptAgreement-summary": "Aceptar el acuerdo de usuario"
+}
