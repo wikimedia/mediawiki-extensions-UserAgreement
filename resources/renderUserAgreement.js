@@ -20,49 +20,52 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
-( function( mw, $ ) {
+( function ( mw, $ ) {
 	/**
 	 * Gobal function to display a user agreement.
 	 */
-	window.renderUserAgreement = function( useragreement ) {
+	window.renderUserAgreement = function ( useragreement ) {
 		( {
 			/**
 			 * Render the user agreement on the page.
 			 */
-			render: function( useragreement ) {
-				var useragreementHtml =
-					"<div id='uaModal'>" +
-					JSON.parse(useragreement).ua +
-					"<div id='uaAcceptInput'> \
-					<input id='uaAccept' type='checkbox'>" +
-					mw.message( 'useragreement-dialog-message' ) +
-					"</input> \
+			render: function ( useragreement ) {
+				var submitButton = new OO.ui.ButtonInputWidget( {
+						id: 'uaAccept',
+						label: mw.msg( 'useragreement-dialog-message' ),
+						icon: 'check'
+					} ),
+				useragreementHtml =
+					'<div id="uaModal">' +
+					JSON.parse( useragreement ).ua +
+					'<div id="uaAcceptInput"> \
 					</div> \
-					</div>";
+					</div>';
 
-				$(function () {
-					$("body").html(useragreementHtml);
-					$("#uaAccept").click( function () {
+				$( function () {
+					$( 'body' ).html( useragreementHtml );
+					$( '#uaAcceptInput' ).append( submitButton.$element );
+					submitButton.$input.click( function () {
 						var api = new mw.Api();
-						api.post({
+						api.post( {
 							action: 'uaAcceptAgreement',
 							token: mw.user.tokens.get( 'editToken' ),
-						}).done(function(data) {
-							location.reload(true);
-						}).fail(function(data) {
-							console.error("[UserAgreement] Failed to accept user agreement for the current user.");
-						});
-					});
-				});
+						} ).done( function ( data ) {
+							location.reload( true );
+						} ).fail( function ( data ) {
+							console.error( '[UserAgreement] Failed to accept user agreement for the current user.' );
+						} );
+					} );
+				} );
 			},
 		} )
 		.render( useragreement );
 	};
 }( mediaWiki, jQuery ) );
 
-$( function() {
+$( function () {
 	if ( mw.config.exists( 'UserAgreement' ) ) {
 		var uaData = mw.config.get( 'UserAgreement' );
 		renderUserAgreement( uaData.useragreement );
 	}
-});
+} );

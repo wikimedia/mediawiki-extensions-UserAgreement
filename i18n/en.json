@@ -6,7 +6,7 @@
 	},
 	"useragreement-desc": "Renders the user agreement after login.",
 	"useragreement": "",
-	"useragreement-dialog-message": "Check box to consent to the conditions above",
+	"useragreement-dialog-message": "Yes, I agree",
 	"apihelp-uaAcceptAgreement-description": "Accept the user agreement",
 	"apihelp-uaAcceptAgreement-summary": "Accept the user agreement"
 }

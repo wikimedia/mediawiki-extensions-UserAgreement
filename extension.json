@@ -30,6 +30,9 @@
 			"scripts": [
 				"/resources/renderUserAgreement.js"
 			],
+			"dependencies": [
+				"oojs-ui-core"
+			],
 			"messages": [
 				"useragreement-dialog-message"
 			]
