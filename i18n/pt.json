@@ -5,7 +5,7 @@
 		]
 	},
 	"useragreement-desc": "Apresenta o acordo de utilização ao iniciar uma sessão.",
-	"useragreement-dialog-message": "Marque a caixa para aceitar as condições acima",
+	"useragreement-dialog-message": "Sim, concordo",
 	"apihelp-uaAcceptAgreement-description": "Aceitar o acordo de utilização",
 	"apihelp-uaAcceptAgreement-summary": "Aceitar o acordo de utilização"
 }

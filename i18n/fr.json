@@ -6,7 +6,7 @@
 		]
 	},
 	"useragreement-desc": "Affiche l’accord utilisateur après la connexion.",
-	"useragreement-dialog-message": "Cocher la case pour accepter les conditions ci-dessus",
+	"useragreement-dialog-message": "Oui, je suis d'accord",
 	"apihelp-uaAcceptAgreement-description": "Accepter l’accord utilisateur",
 	"apihelp-uaAcceptAgreement-summary": "Accepter l’accord utilisateur"
 }
