@@ -5,7 +5,7 @@
 		]
 	},
 	"useragreement-desc": "Извежда споразумение за ползване след вход.",
-	"useragreement-dialog-message": "Отметка за съгласие с условията по-горе",
+	"useragreement-dialog-message": "Да, съгласен съм",
 	"apihelp-uaAcceptAgreement-description": "Приемане на споразумението за ползване",
 	"apihelp-uaAcceptAgreement-summary": "Приемане на споразумението за ползване"
 }
