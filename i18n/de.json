@@ -1,11 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Kghbln"
 		]
 	},
-	"useragreement-desc": "Rendert nach der Anmeldung die Benutzervereinbarung.",
+	"useragreement-desc": "Zeigt nach der Anmeldung die zu bestätigenden Nutzungsbedingungen",
 	"useragreement-dialog-message": "Ja, ich stimme zu",
-	"apihelp-uaAcceptAgreement-description": "Die Benutzervereinbarung akzeptieren",
-	"apihelp-uaAcceptAgreement-summary": "Akzeptiert die Benutzervereinbarung"
+	"apihelp-uaAcceptAgreement-description": "Die Nutzungbedingungen akzeptieren",
+	"apihelp-uaAcceptAgreement-summary": "Akzeptieren der Nutzungsbedingungen"
 }
