@@ -122,7 +122,7 @@ class UserAgreement {
 			}
 		} catch ( DBQueryError $e ) {
 			wfLogWarning(
-				'[UserAgreement][getUserUAAcceptedDate] A database error has occured. ' .
+				'[UserAgreement][getUserUAAcceptedDate] A database error has occurred. ' .
 				'Most likely the useragreement table is missing. ' .
 				'The UserAgreement extension may not have been installed correctly. ' .
 				'Please run update.php to try and correct this error.'
