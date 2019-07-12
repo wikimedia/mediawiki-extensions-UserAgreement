@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"useragreement-desc": "Daje korisnički ugovor nakon prijave.",
+	"apihelp-uaAcceptAgreement-description": "Prihvati korisnički ugovor",
+	"apihelp-uaAcceptAgreement-summary": "Prihvati korisnički ugovor"
+}
