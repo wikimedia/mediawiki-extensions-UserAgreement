@@ -80,7 +80,7 @@ class UserAgreementHooks {
 			$out->clearHTML();
 
 			// use the output page to safely parse the user agreement
-			$out->addWikiText( $useragreement );
+			$out->addWikiTextAsInterface( $useragreement );
 			$useragreement = $out->getHTML();
 			// pack user agreement into json for passing to js
 			$useragreement = json_encode( [ 'ua' => $useragreement ] );
