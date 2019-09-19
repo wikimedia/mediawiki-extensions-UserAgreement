@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vlad5250"
+			"Vlad5250",
+			"Movses"
 		]
 	},
+	"useragreement-desc": "Показывает пользовательское соглашение после входа в учётную запись.",
 	"useragreement-dialog-message": "Да, я согласен",
 	"apihelp-uaAcceptAgreement-description": "Принять пользовательское соглашение",
 	"apihelp-uaAcceptAgreement-summary": "Принять пользовательское соглашение"
