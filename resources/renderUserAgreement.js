@@ -49,7 +49,7 @@
 						var api = new mw.Api();
 						api.post( {
 							action: 'uaAcceptAgreement',
-							token: mw.user.tokens.get( 'editToken' ),
+							token: mw.user.tokens.get( 'csrfToken' ),
 						} ).done( function ( data ) {
 							location.reload( true );
 						} ).fail( function ( data ) {
