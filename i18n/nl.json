@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98"
+		]
+	},
+	"useragreement-desc": "Toont de gebruikersovereenkomst na het aanmelden.",
+	"useragreement-dialog-message": "Ja, ik ga akkoord",
+	"apihelp-uaAcceptAgreement-description": "De gebruikersovereenkomst accepteren",
+	"apihelp-uaAcceptAgreement-summary": "De gebruikersovereenkomst accepteren"
+}
