@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226",
-			"Deathkon"
+			"Deathkon",
+			"Liuxinyu970226"
 		]
 	},
 	"useragreement-desc": "在登录后呈现用户协议。",
