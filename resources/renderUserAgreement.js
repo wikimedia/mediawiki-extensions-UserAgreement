@@ -20,7 +20,7 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
-( function ( mw, $ ) {
+( function () {
 	/**
 	 * Gobal function to display a user agreement.
 	 */
@@ -35,37 +35,42 @@
 						label: mw.msg( 'useragreement-dialog-message' ),
 						icon: 'check'
 					} ),
-				useragreementHtml =
-					'<div id="uaModal">' +
-					JSON.parse( useragreement ).ua +
-					'<div id="uaAcceptInput"> \
-					</div> \
-					</div>';
+					useragreementHtml =
+						'<div id="uaModal">' +
+						JSON.parse( useragreement ).ua +
+						'<div id="uaAcceptInput"> \
+						</div> \
+						</div>';
 
 				$( function () {
+					// eslint-disable-next-line no-jquery/no-global-selector
 					$( 'body' ).html( useragreementHtml );
+					// eslint-disable-next-line no-jquery/no-global-selector
 					$( '#uaAcceptInput' ).append( submitButton.$element );
-					submitButton.$input.click( function () {
+					submitButton.$input.on( 'click', function () {
 						var api = new mw.Api();
 						api.post( {
 							action: 'uaAcceptAgreement',
-							token: mw.user.tokens.get( 'csrfToken' ),
-						} ).done( function ( data ) {
+							token: mw.user.tokens.get( 'csrfToken' )
+						} ).done( function ( /* data */ ) {
 							location.reload( true );
-						} ).fail( function ( data ) {
+						} ).fail( function ( /* data */ ) {
+							// eslint-disable-next-line no-console
 							console.error( '[UserAgreement] Failed to accept user agreement for the current user.' );
 						} );
 					} );
 				} );
-			},
+			}
 		} )
-		.render( useragreement );
+			.render( useragreement );
 	};
-}( mediaWiki, jQuery ) );
+}() );
 
 $( function () {
+	var uaData;
+
 	if ( mw.config.exists( 'UserAgreement' ) ) {
-		var uaData = mw.config.get( 'UserAgreement' );
-		renderUserAgreement( uaData.useragreement );
+		uaData = mw.config.get( 'UserAgreement' );
+		window.renderUserAgreement( uaData.useragreement );
 	}
 } );
