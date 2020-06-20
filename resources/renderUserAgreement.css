@@ -1,9 +1,9 @@
-#uaAcceptInput{
-    text-align:center;
+#uaAcceptInput {
+	text-align: center;
 }
 
-#uaModal{
-    border:1px solid grey;
-    padding:10px;
-    font-size:small;
+#uaModal {
+	border: 1px solid #808080;
+	padding: 10px;
+	font-size: small;
 }
