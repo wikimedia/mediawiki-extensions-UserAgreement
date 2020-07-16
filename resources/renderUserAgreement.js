@@ -23,11 +23,15 @@
 ( function () {
 	/**
 	 * Gobal function to display a user agreement.
+	 *
+	 * @param useragreement
 	 */
 	window.renderUserAgreement = function ( useragreement ) {
 		( {
 			/**
 			 * Render the user agreement on the page.
+			 *
+			 * @param useragreement
 			 */
 			render: function ( useragreement ) {
 				var submitButton = new OO.ui.ButtonInputWidget( {
