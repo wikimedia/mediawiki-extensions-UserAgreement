@@ -9,6 +9,7 @@
 		"mw": "readonly"
 	},
 	"rules": {
-		"no-multi-str": "off"
+		"no-multi-str": "off",
+		"no-shadow": "warn"
 	}
 }
