@@ -58,7 +58,10 @@ class UserAgreementHooks {
 		// get the relevant dates for comparison
 		$uaModifiedDate = UserAgreement::getUALastModifiedDate();
 		$userUAAcceptedDate = UserAgreement::getUserUAAcceptedDate( $userId );
-
+		$date = date_create();//Finds date today
+		$yearAgoTime = (date_timestamp_get($date) - 31536000);//Finds the time a year ago today
+		//Created timestamp from a year ago today
+		$yearAgoToday = wfTimestamp( TS_UNIX, $yearAgoTime );//Changed formatting of that time
 		/* If the current user is logged in and the user agreement was changed
 		 * after the user last accepted it then they need to do it again.
 		 *
@@ -68,7 +71,7 @@ class UserAgreementHooks {
 		 * never accepted any revision of the user agreement. In this case,
 		 * both dates will be the default value (and thus, equivalent).
 		 */
-		if ( $userId > 0 && $userUAAcceptedDate <= $uaModifiedDate ) {
+		if ( $userId > 0 && ( $userUAAcceptedDate <= $uaModifiedDate || $userUAAcceptedDate <= $yearAgoToday ) ) {
 			// get the user agreement
 			$useragreement = wfMessage( 'useragreement' )->text();
 			// do not render the UA if it is empty or non-existant
