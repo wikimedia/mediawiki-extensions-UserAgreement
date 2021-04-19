@@ -58,6 +58,7 @@
 		"main": {
 			"class": "MediaWiki\\Extension\\UserAgreement\\MainHooks",
 			"services": [
+				"MainConfig",
 				"UserAgreementStore"
 			]
 		}
@@ -65,5 +66,10 @@
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "schema",
 		"BeforePageDisplay": "main"
+	},
+	"config": {
+		"UserAgreement_DaysToReaccept": {
+			"value": 0
+		}
 	}
 }
