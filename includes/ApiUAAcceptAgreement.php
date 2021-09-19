@@ -40,7 +40,7 @@ class ApiUAAcceptAgreement extends ApiBase {
 	 */
 	public function execute() {
 		$userId = $this->getUser()->getId();
-		$dbw = wfGetDB( DB_MASTER );
+		$dbw = wfGetDB( DB_PRIMARY );
 		$dbw->upsert(
 			'useragreement',
 			[
