@@ -1,4 +1,5 @@
 {
+	"name": "UserAgreement",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
