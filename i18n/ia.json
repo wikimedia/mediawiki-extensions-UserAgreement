@@ -4,5 +4,8 @@
 			"McDutchie"
 		]
 	},
-	"useragreement-dialog-message": "Si, io es de accordo"
+	"useragreement-desc": "Monstra le accordo de usator post apertura de session.",
+	"useragreement-dialog-message": "Si, io es de accordo",
+	"apihelp-uaAcceptAgreement-description": "Acceptar le accordo de usator",
+	"apihelp-uaAcceptAgreement-summary": "Acceptar le accordo de usator"
 }
