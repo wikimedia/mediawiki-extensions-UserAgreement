@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"useragreement-desc": "Po prijavi prikaže uporabniški sporazum.",
+	"useragreement-dialog-message": "Da, soglašam",
+	"apihelp-uaAcceptAgreement-description": "Soglašanje z uporabniškim sporazumom",
+	"apihelp-uaAcceptAgreement-summary": "Soglašanje z uporabniškim sporazumom"
+}
