@@ -7,6 +7,5 @@
 	"useragreement-desc": "Renders the user agreement after login.",
 	"useragreement": "",
 	"useragreement-dialog-message": "Yes, I agree",
-	"apihelp-uaAcceptAgreement-description": "Accept the user agreement",
 	"apihelp-uaAcceptAgreement-summary": "Accept the user agreement"
 }
