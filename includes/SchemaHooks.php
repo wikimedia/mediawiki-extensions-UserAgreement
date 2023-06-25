@@ -21,34 +21,17 @@
 
 namespace MediaWiki\Extension\UserAgreement;
 
-use ApiBase;
-use ApiMain;
+use DatabaseUpdater;
+use MediaWiki\Installer\Hook\LoadExtensionSchemaUpdatesHook;
 
-class ApiUAAcceptAgreement extends ApiBase {
-
+class SchemaHooks implements LoadExtensionSchemaUpdatesHook {
 	/**
-	 * @var UserAgreementStore
+	 * Updates database schema.
+	 *
+	 * @param DatabaseUpdater $updater database updater
 	 */
-	private $userAgreementStore;
-
-	/**
-	 * @param ApiMain $main main module
-	 * @param string $action name of this module
-	 * @param UserAgreementStore $userAgreementStore
-	 */
-	public function __construct( ApiMain $main, string $action, UserAgreementStore $userAgreementStore ) {
-		parent::__construct( $main, $action );
-		$this->userAgreementStore = $userAgreementStore;
-	}
-
-	public function execute(): void {
-		$this->userAgreementStore->updateUserAcceptedTimestamp( $this->getUser()->getId() );
-	}
-
-	/**
-	 * @return string the token type this module requires in order to execute
-	 */
-	public function needsToken(): string {
-		return 'csrf';
+	public function onLoadExtensionSchemaUpdates( $updater ) {
+		$dir = __DIR__ . '/../sql/' . $updater->getDB()->getType() . '/';
+		$updater->addExtensionTable( 'useragreement', $dir . 'UserAgreement.sql' );
 	}
 }
