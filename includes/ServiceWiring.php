@@ -21,34 +21,21 @@
 
 namespace MediaWiki\Extension\UserAgreement;
 
-use ApiBase;
-use ApiMain;
+use MediaWiki\MediaWikiServices;
 
-class ApiUAAcceptAgreement extends ApiBase {
+// PHP unit does not understand code coverage for this file
+// as the @covers annotation cannot cover a specific file
+// This is fully tested in ServiceWiringTest.php
+// @codeCoverageIgnoreStart
 
-	/**
-	 * @var UserAgreementStore
-	 */
-	private $userAgreementStore;
+return [
+	'UserAgreementStore' =>
+		static function ( MediaWikiServices $services ): UserAgreementStore {
+			return new UserAgreementStore(
+				$services->getDBLoadBalancer(),
+				$services->getWikiPageFactory()
+			);
+		},
+];
 
-	/**
-	 * @param ApiMain $main main module
-	 * @param string $action name of this module
-	 * @param UserAgreementStore $userAgreementStore
-	 */
-	public function __construct( ApiMain $main, string $action, UserAgreementStore $userAgreementStore ) {
-		parent::__construct( $main, $action );
-		$this->userAgreementStore = $userAgreementStore;
-	}
-
-	public function execute(): void {
-		$this->userAgreementStore->updateUserAcceptedTimestamp( $this->getUser()->getId() );
-	}
-
-	/**
-	 * @return string the token type this module requires in order to execute
-	 */
-	public function needsToken(): string {
-		return 'csrf';
-	}
-}
+// @codeCoverageIgnoreEnd

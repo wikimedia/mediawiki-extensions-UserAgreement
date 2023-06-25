@@ -1,0 +1,29 @@
+[
+	{
+		"name": "useragreement",
+		"columns": [
+			{
+				"name": "ua_user",
+				"comment": "User ID",
+				"type": "integer",
+				"options": {
+					"unsigned": true,
+					"notnull": true
+				}
+			},
+			{
+				"name": "ua_user_accepted_timestamp",
+				"comment": "User Agreement Timestamp",
+				"type": "mwtimestamp",
+				"options": {
+					"notnull": true,
+					"default": "19700101000000"
+				}
+			}
+		],
+		"indexes": [],
+		"pk": [
+			"ua_user"
+		]
+	}
+]
