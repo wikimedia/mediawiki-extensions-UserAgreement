@@ -7,6 +7,5 @@
 	},
 	"useragreement-desc": "הצגת תנאי השימוש לאחר הכניסה לחשבון.",
 	"useragreement-dialog-message": "כן, אני {{GENDER:|מסכים|מסכימה}}",
-	"apihelp-uaAcceptAgreement-description": "הסכמה לתנאי השימוש",
 	"apihelp-uaAcceptAgreement-summary": "הסכמה לתנאי השימוש"
 }

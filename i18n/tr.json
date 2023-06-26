@@ -7,6 +7,5 @@
 	},
 	"useragreement-desc": "Oturum açtıktan sonra kullanıcı sözleşmesini oluşturur.",
 	"useragreement-dialog-message": "Evet, katılıyorum",
-	"apihelp-uaAcceptAgreement-description": "Kullanıcı sözleşmesini kabul et",
 	"apihelp-uaAcceptAgreement-summary": "Kullanıcı sözleşmesini kabul et"
 }

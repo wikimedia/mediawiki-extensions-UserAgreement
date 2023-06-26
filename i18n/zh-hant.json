@@ -6,6 +6,5 @@
 	},
 	"useragreement-desc": "在登入後呈現使用者協議。",
 	"useragreement-dialog-message": "是的，我同意",
-	"apihelp-uaAcceptAgreement-description": "接受使用者協議",
 	"apihelp-uaAcceptAgreement-summary": "接受使用者協議"
 }

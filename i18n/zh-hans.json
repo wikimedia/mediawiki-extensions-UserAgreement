@@ -8,6 +8,5 @@
 	},
 	"useragreement-desc": "在登录后呈现用户协议。",
 	"useragreement-dialog-message": "同意",
-	"apihelp-uaAcceptAgreement-description": "接受用户协议",
 	"apihelp-uaAcceptAgreement-summary": "接受用户协议"
 }
