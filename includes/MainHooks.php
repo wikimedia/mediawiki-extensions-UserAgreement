@@ -21,6 +21,8 @@
 
 namespace MediaWiki\Extension\UserAgreement;
 
+use Config;
+use DateTimeImmutable;
 use MediaWiki\Hook\BeforePageDisplayHook;
 use OutputPage;
 use Skin;
@@ -28,14 +30,21 @@ use Skin;
 class MainHooks implements BeforePageDisplayHook {
 
 	/**
+	 * @var int
+	 */
+	private $daysToReaccept;
+
+	/**
 	 * @var UserAgreementStore
 	 */
 	private $userAgreementStore;
 
 	/**
+	 * @param Config $config
 	 * @param UserAgreementStore $userAgreementStore
 	 */
-	public function __construct( UserAgreementStore $userAgreementStore ) {
+	public function __construct( Config $config, UserAgreementStore $userAgreementStore ) {
+		$this->daysToReaccept = $config->get( 'UserAgreement_DaysToReaccept' );
 		$this->userAgreementStore = $userAgreementStore;
 	}
 
@@ -77,9 +86,8 @@ class MainHooks implements BeforePageDisplayHook {
 		$userAcceptedTimestamp =
 			$this->userAgreementStore->getUserAcceptedTimestamp( $userId );
 
-		/* If the current user is logged in and the user agreement is not empty
-		 * and was changed after the user last accepted it then they need to do
-		 * it again.
+		/* Check if user agreement  was changed after the user last accepted it or
+		 * if the number of days to reaccept has been exceeded.
 		 *
 		 * Note: the timestamp comparison MUST BE '<=' and NOT '<' to work properly.
 		 * The strict equality condition exists to handle the case where the
@@ -88,8 +96,26 @@ class MainHooks implements BeforePageDisplayHook {
 		 * timestamps will be the default value (and thus, equivalent).
 		 */
 		if ( $userAcceptedTimestamp > $agreementLastModificationTimestamp ) {
-			return;
+			// Check the cutoff for reaccepting
+			if ( is_int( $this->daysToReaccept ) && $this->daysToReaccept > 0 ) {
+				// get today's date
+				$date = new DateTimeImmutable();
+				// subtract the number of days to reaccept
+				$date = $date->modify( "-" . $this->daysToReaccept . " days" );
+				$timestampCutoff = $date->getTimestamp();
+				if ( $userAcceptedTimestamp > $timestampCutoff ) {
+					return;
+				}
+			} else {
+				return;
+			}
 		}
+
+		/* If the current user is logged in and the user agreement is not empty
+		 * and was changed after the user last accepted it or the number of days
+		 * to reaccept the user agreement has been exceeded, then they need to do
+		 * it again.
+		 */
 
 		// blow away all the html so we use its parsing for the user agreement html
 		$out->clearHTML();
