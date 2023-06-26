@@ -1,29 +1,35 @@
 {
 	"name": "UserAgreement",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"author": [
 		"[https://www.mediawiki.org/wiki/User:Kevin.ji Kevin Ji]",
 		"[https://www.mediawiki.org/wiki/User:Cindy.cicalese Cindy Cicalese]"
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:UserAgreement",
 	"descriptionmsg": "useragreement-desc",
-	"manifest_version": 1,
+	"manifest_version": 2,
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.35.3"
+		"MediaWiki": ">= 1.39.0"
 	},
 	"MessagesDirs": {
 		"UserAgreement": [
 			"i18n"
 		]
 	},
-	"APIModules": {
-		"uaAcceptAgreement": "ApiUAAcceptAgreement"
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\UserAgreement\\": "includes/"
 	},
-	"AutoloadClasses": {
-		"UserAgreement": "includes/UserAgreement.php",
-		"UserAgreementHooks": "includes/UserAgreementHooks.php",
-		"ApiUAAcceptAgreement": "includes/ApiUAAcceptAgreement.php"
+	"APIModules": {
+		"uaAcceptAgreement": {
+			"class": "MediaWiki\\Extension\\UserAgreement\\ApiUAAcceptAgreement",
+			"services": [
+				"UserAgreementStore"
+			]
+		}
 	},
 	"ResourceModules": {
 		"ext.UserAgreement.render": {
@@ -45,12 +51,19 @@
 		"localBasePath": "",
 		"remoteExtPath": "UserAgreement"
 	},
+	"HookHandlers": {
+		"schema": {
+			"class": "MediaWiki\\Extension\\UserAgreement\\SchemaHooks"
+		},
+		"main": {
+			"class": "MediaWiki\\Extension\\UserAgreement\\MainHooks",
+			"services": [
+				"UserAgreementStore"
+			]
+		}
+	},
 	"Hooks": {
-		"LoadExtensionSchemaUpdates": [
-			"UserAgreementHooks::loadExtensionSchemaUpdates"
-		],
-		"BeforePageDisplay": [
-			"UserAgreementHooks::addUserAgreement"
-		]
+		"LoadExtensionSchemaUpdates": "schema",
+		"BeforePageDisplay": "main"
 	}
 }
