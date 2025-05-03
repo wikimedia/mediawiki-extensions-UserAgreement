@@ -34,7 +34,7 @@
 			 * @param useragreement
 			 */
 			render: function ( useragreement ) {
-				var submitButton = new OO.ui.ButtonInputWidget( {
+				const submitButton = new OO.ui.ButtonInputWidget( {
 						id: 'uaAccept',
 						label: mw.msg( 'useragreement-dialog-message' ),
 						icon: 'check'
@@ -46,19 +46,19 @@
 						</div> \
 						</div>';
 
-				$( function () {
+				$( () => {
 					// eslint-disable-next-line no-jquery/no-global-selector
 					$( 'body' ).html( useragreementHtml );
 					// eslint-disable-next-line no-jquery/no-global-selector
 					$( '#uaAcceptInput' ).append( submitButton.$element );
-					submitButton.$input.on( 'click', function () {
-						var api = new mw.Api();
+					submitButton.$input.on( 'click', () => {
+						const api = new mw.Api();
 						api.post( {
 							action: 'uaAcceptAgreement',
 							token: mw.user.tokens.get( 'csrfToken' )
-						} ).done( function ( /* data */ ) {
+						} ).done( ( /* data */ ) => {
 							location.reload( true );
-						} ).fail( function ( /* data */ ) {
+						} ).fail( ( /* data */ ) => {
 							// eslint-disable-next-line no-console
 							console.error( '[UserAgreement] Failed to accept user agreement for the current user.' );
 						} );
@@ -70,8 +70,8 @@
 	};
 }() );
 
-$( function () {
-	var uaData;
+$( () => {
+	let uaData;
 
 	if ( mw.config.exists( 'UserAgreement' ) ) {
 		uaData = mw.config.get( 'UserAgreement' );
