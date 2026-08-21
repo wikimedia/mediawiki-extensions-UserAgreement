@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"useragreement-desc": "Zobrazuje používateľskú dohodu po prihlásení.",
+	"useragreement-dialog-message": "Áno, súhlasím",
+	"apihelp-uaAcceptAgreement-summary": "Prijať používateľskú dohodu"
+}
